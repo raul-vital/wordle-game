@@ -14,7 +14,7 @@ const boardEl = document.querySelector('#board')
 const keyboardEl = document.querySelector('.keyboard')
 const enterEl = document.querySelector('enter')
 const deleteEl = document.querySelector('delete')
-
+const resetBtn = document.querySelector('#restart')
 //runs game
 init()
 
@@ -34,12 +34,10 @@ function handleGuess(){
 }
 
 
-
 //Return a random word out of words array
 function randomWord(){
    return words[Math.floor(Math.random()* words.length)]
 }
-
 
 
 
@@ -53,6 +51,7 @@ function renderBoard(){
             let box = document.createElement('div')
                 box.className = 'letter-box'
                 row.appendChild(box)
+                box.textContent = 'test'
                 //console.dir(box)
             }
             boardEl.appendChild(row)

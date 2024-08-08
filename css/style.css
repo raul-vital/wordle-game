@@ -50,7 +50,16 @@ body{
     font-size: 15px;
     font-weight: bold;
     
-   
-    
 }
+#restart{
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #818384;
+    color: white;
+    font-weight: bold;
 
+}
