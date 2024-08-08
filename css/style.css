@@ -23,7 +23,9 @@ body{
     display:flex;
     flex-direction: center;
     justify-content: center;
+    align-items: center;
     background-color: #484848;
+    color:white;
 }
 .letters-row{
     display: flex;
@@ -62,4 +64,12 @@ body{
     color: white;
     font-weight: bold;
 
+}
+#message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    font-size: 30px;
+    color: white;
 }

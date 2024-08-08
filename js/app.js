@@ -14,7 +14,8 @@ const boardEl = document.querySelector('#board')
 const keyboardEl = document.querySelector('.keyboard')
 const enterEl = document.querySelector('enter')
 const deleteEl = document.querySelector('delete')
-const resetBtn = document.querySelector('#restart')
+const restartBtnEl = document.querySelector('#restart')
+const messageEl = document.querySelector('p')
 //runs game
 init()
 
