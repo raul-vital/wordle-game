@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#title{
+    font-size: 35px;
+    font-weight:bolder;
+
+}
+#board{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.letter-box{
+    border: 2px solid grey;
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+    display:flex;
+    flex-direction: center;
+    justify-content: center;
+    background-color: white;
+}
+.letters-row{
+    display: flex;
+    font-size: 20px
+
+}
+
