@@ -14,8 +14,10 @@ const enterEl = document.querySelector('#enter')
 const deleteEl = document.querySelector('#delete')
 const restartBtnEl = document.querySelector('#restart')
 const messageEl = document.querySelector('p')
+
 //runs game
 init()
+
 /*-------------- Functions -------------*/
 //initializes the game
 function init(){
@@ -23,6 +25,7 @@ function init(){
     row = 0;
     rightGuess = randomWord()
     renderBoard()
+    messageEl.textContent = ''
     console.log(rightGuess)
 
 }
@@ -63,7 +66,7 @@ function checkGuess(){
     })
   
     if(currentGuess.toLowerCase() === rightGuess.toLowerCase()){
-        messageEl.textContent = 'Congratulations! You guessed the right word!'
+        messageEl.textContent = 'Congratulations! You guessed the right country!'
         return
 
     }if(row < NUM_GUESSES - 1){
@@ -71,7 +74,7 @@ function checkGuess(){
         currentGuess = ''
 
     }else{
-        messageEl.textContent = `You lost! The word was "${rightGuess}".`
+        messageEl.textContent = `You lost! The country was "${rightGuess}".`
     }
 }
 
@@ -93,6 +96,7 @@ function randomWord(){
 
 // Renders the board game to site
 function renderBoard(){
+    boardEl.innerHTML =''
        for(let i = 0; i < NUM_GUESSES * rightGuess.length; i++){
             let box = document.createElement('div')
                 box.classList.add('letter-box')
