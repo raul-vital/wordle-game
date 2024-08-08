@@ -19,15 +19,17 @@ init()
 /*-------------- Functions -------------*/
 //initializes the game
 function init(){
-    currentGuess = '';
+    currentGuess = ''
     row = 0;
     rightGuess = randomWord()
     renderBoard()
-    //console.log(rightGuess)
+    console.log(rightGuess)
 
 }
+//Handle guess according to click on Enter, deletes on Delete and updates box color depending on the letter
 function handleGuess(element){
     const key = element.target.textContent
+
     if(key ==='Enter'){
         if(currentGuess.length === rightGuess.length){
             checkGuess()
@@ -39,19 +41,20 @@ function handleGuess(element){
         }
     }else{
         if(currentGuess.length < rightGuess.length){
-            currentGuess += key
+            currentGuess = currentGuess + key
             updateBoard()
         }
     }
 }
 
+//Loops through selected rows and updates color of boxes and display win/loss messages
 function checkGuess(){
     const boxes = Array.from(boardEl.children).slice(row * rightGuess.length, (row + 1) * rightGuess.length)
     boxes.forEach((box,index)=> {
-        if(currentGuess[index] === rightGuess[index]){
+        if(currentGuess[index].toLowerCase() === rightGuess[index].toLowerCase()){
             box.style.backgroundColor = 'Green'
 
-        }else if(rightGuess.includes(currentGuess[index])){
+        }else if(rightGuess.toLowerCase().includes(currentGuess[index].toLowerCase())){
             box.style.backgroundColor = 'Yellow'
         
         }else{
@@ -59,8 +62,8 @@ function checkGuess(){
         }
     })
   
-    if(currentGuess === rightGuess){
-        messageEl.textContent = 'Congratulations! You guessed the word!'
+    if(currentGuess.toLowerCase() === rightGuess.toLowerCase()){
+        messageEl.textContent = 'Congratulations! You guessed the right word!'
         return
 
     }if(row < NUM_GUESSES - 1){
@@ -71,6 +74,8 @@ function checkGuess(){
         messageEl.textContent = `You lost! The word was ${rightGuess}.`
     }
 }
+
+//Loops through each box in the selected row and updates the text content in them
 function updateBoard(){
    const boxes = Array.from(boardEl.children).slice(row * rightGuess.length, (row + 1)* rightGuess.length)
    boxes.forEach((box, index)=> {
