@@ -36,7 +36,7 @@ function handleGuess(element){
         }
     }else if(key ==='Delete'){
         if(currentGuess.length > 0){
-            currentGuess = currentGuess.slice(0, -1)
+            currentGuess = currentGuess.slice(0, -3)
             updateBoard()
         }
     }else{
@@ -52,13 +52,13 @@ function checkGuess(){
     const boxes = Array.from(boardEl.children).slice(row * rightGuess.length, (row + 1) * rightGuess.length)
     boxes.forEach((box,index)=> {
         if(currentGuess[index].toLowerCase() === rightGuess[index].toLowerCase()){
-            box.style.backgroundColor = 'Green'
+            box.style.backgroundColor = '#2b780b'
 
         }else if(rightGuess.toLowerCase().includes(currentGuess[index].toLowerCase())){
-            box.style.backgroundColor = 'Yellow'
+            box.style.backgroundColor = '#c1cc4d'
         
         }else{
-            box.style.backgroundColor = 'Gray'
+            box.style.backgroundColor = '#464641'
         }
     })
   
@@ -71,7 +71,7 @@ function checkGuess(){
         currentGuess = ''
 
     }else{
-        messageEl.textContent = `You lost! The word was ${rightGuess}.`
+        messageEl.textContent = `You lost! The word was "${rightGuess}".`
     }
 }
 
