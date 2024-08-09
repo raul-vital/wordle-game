@@ -26,7 +26,6 @@ function init(){
     rightGuess = randomWord()
     renderBoard()
     messageEl.textContent = ''
-    console.log(rightGuess)
 
 
 }
