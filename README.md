@@ -7,7 +7,7 @@
 
 ### Getting started:
 
-* 
+* [Wordle - Countries Edition](https://raul-vital.github.io/wordle-game/)
 
 * Planning Materials at the bottom of README file. 
 
@@ -18,12 +18,18 @@
 * JavaScript
 
 ### Next steps: 
-* Implementing attempts number
+* Implementing number of attempts
 
 * Updating colors of boxes at the keyboard
 
 * Updating the color of only one box if a letter is present only once in word. 
 
+### Resources: 
+* [MDN Docs - Array.from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+
+* [HTML Color Codes](https://htmlcolorcodes.com/)
+
+* [MDN Docs - innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 
 
 
