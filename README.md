@@ -1,3 +1,34 @@
+# Wordle - Countries Edition
+![Top part of Wordle game](https://i.imgur.com/hrGAwiZ.png)
+![Bottom part of Wordle game](https://i.imgur.com/koW8nBQ.png)
+
+### Game name: 
+* Wordle - Countries Edition
+
+### Getting started:
+
+* 
+
+* Planning Materials at the bottom of README file. 
+
+### Technologies used: 
+
+* HTML
+* CSS 
+* JavaScript
+
+### Next steps: 
+* Implementing attempts number
+
+* Updating colors of boxes at the keyboard
+
+* Updating the color of only one box if a letter is present only once in word. 
+
+
+
+
+
+
 # Project planning - Browser Game
 #### Game of choice: Wordle
 ### Raul Vital
@@ -28,10 +59,10 @@
 * As a user, I want to be able to reset the game and play again.
 
 
-*As a user, I want to see a keyboard so I can input my guess
+* As a user, I want to see a keyboard so I can input my guess
 
 
-*As a user, I want to see animated tiles displaying my guess 
+* As a user, I want to see animated tiles displaying my guess 
 
 
 #### Pseudocode:

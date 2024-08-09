@@ -1,5 +1,5 @@
 /*-------------- Constants -------------*/
-const words = ['italy','china','india','nepal','ghana','spain','japan','haiti']
+const words = ['italy','china','india','nepal','ghana','spain','japan','haiti','egypt','qatar','chile','kenya','syria']
 const NUM_GUESSES = 5
 
 /*---------- Variables (state) ---------*/
@@ -35,8 +35,8 @@ function handleGuess(element){
 
     if(key ==='Enter'){
         if(currentGuess.length === rightGuess.length){
-            checkGuess()
-        }
+                checkGuess()
+            }
     }else if(key ==='Delete'){
         if(currentGuess.length > 0){
             currentGuess = currentGuess.slice(0, -3)
@@ -64,7 +64,7 @@ function checkGuess(){
             box.style.backgroundColor = '#464641'
         }
     })
-  
+
     if(currentGuess.toLowerCase() === rightGuess.toLowerCase()){
         messageEl.textContent = 'Congratulations! You guessed the right country!'
         return
