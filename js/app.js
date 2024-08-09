@@ -26,8 +26,6 @@ function init(){
     rightGuess = randomWord()
     renderBoard()
     messageEl.textContent = ''
-
-
 }
 //Handle guess according to click on Enter, deletes on Delete and updates box color depending on the letter
 function handleGuess(element){
@@ -62,10 +60,8 @@ function checkGuess(){
     boxes.forEach((box,index)=> {
         if(currentGuess[index].toLowerCase() === rightGuess[index].toLowerCase()){
             box.style.backgroundColor = '#2b780b'
-
         }else if(rightGuess.toLowerCase().includes(currentGuess[index].toLowerCase())){
-            box.style.backgroundColor = '#c1cc4d'
-        
+            box.style.backgroundColor = '#cab500'
         }else{
             box.style.backgroundColor = '#464641'
         }
