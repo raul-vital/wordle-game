@@ -28,6 +28,7 @@ function init(){
     messageEl.textContent = ''
     console.log(rightGuess)
 
+
 }
 //Handle guess according to click on Enter, deletes on Delete and updates box color depending on the letter
 function handleGuess(element){
@@ -35,8 +36,14 @@ function handleGuess(element){
 
     if(key ==='Enter'){
         if(currentGuess.length === rightGuess.length){
+            if(words.includes(currentGuess.toLowerCase())){
+                messageEl.textContent = ''
                 checkGuess()
+            }else{
+                messageEl.textContent = `Word is not in the countries' list`
+                
             }
+        }
     }else if(key ==='Delete'){
         if(currentGuess.length > 0){
             currentGuess = currentGuess.slice(0, -3)
@@ -46,9 +53,9 @@ function handleGuess(element){
         if(currentGuess.length < rightGuess.length){
             currentGuess = currentGuess + key
             updateBoard()
+           }
         }
-    }
-}
+   }
 
 //Loops through selected rows and updates color of boxes and display win/loss messages
 function checkGuess(){
@@ -73,7 +80,7 @@ function checkGuess(){
         row++
         currentGuess = ''
 
-    }else{
+    }else if(currentGuess.toLowerCase() !== rightGuess.toLowerCase()){
         messageEl.textContent = `You lost! The country was "${rightGuess}".`
     }
 }
