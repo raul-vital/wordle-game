@@ -20,8 +20,6 @@
 ### Next steps: 
 * Implementing number of attempts
 
-* Updating colors of boxes at the keyboard
-
 * Updating the color of only one box if a letter is present only once in word. 
 
 ### Resources: 
@@ -30,6 +28,8 @@
 * [HTML Color Codes](https://htmlcolorcodes.com/)
 
 * [MDN Docs - innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+
+
 
 
 

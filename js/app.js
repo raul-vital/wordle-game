@@ -14,6 +14,7 @@ const enterEl = document.querySelector('#enter')
 const deleteEl = document.querySelector('#delete')
 const restartBtnEl = document.querySelector('#restart')
 const messageEl = document.querySelector('p')
+const buttonEl = document.querySelectorAll('.button')
 
 //runs game
 init()
@@ -25,7 +26,8 @@ function init(){
     row = 0;
     rightGuess = randomWord()
     renderBoard()
-    messageEl.textContent = ''
+    restartKeyboard()
+
 }
 //Handle guess according to click on Enter, deletes on Delete and updates box color depending on the letter
 function handleGuess(element){
@@ -58,12 +60,18 @@ function handleGuess(element){
 function checkGuess(){
     const boxes = Array.from(boardEl.children).slice(row * rightGuess.length, (row + 1) * rightGuess.length)
     boxes.forEach((box,index)=> {
+        const letter = currentGuess[index].toLowerCase()
+        const keyEl = document.querySelector(`.button[data-key="${letter}"]`)
+        console.dir(keyEl)
         if(currentGuess[index].toLowerCase() === rightGuess[index].toLowerCase()){
             box.style.backgroundColor = '#2b780b'
+            keyEl.style.backgroundColor = '#2b780b'
         }else if(rightGuess.toLowerCase().includes(currentGuess[index].toLowerCase())){
             box.style.backgroundColor = '#cab500'
+            keyEl.style.backgroundColor = '#cab500'
         }else{
             box.style.backgroundColor = '#464641'
+            keyEl.style.backgroundColor = '#464641'
         }
     })
 
@@ -103,6 +111,13 @@ function renderBoard(){
        }
     }
 
+//loops through buttonEl class and sets background color to default 
+function restartKeyboard(){
+    buttonEl.forEach(key => {
+        key.style.backgroundColor = '#818384'
+    })
+
+}
 /*----------- Event Listeners ----------*/
 keyboardEl.forEach(key => key.addEventListener('click', handleGuess))
 enterEl.addEventListener('click',handleGuess)
