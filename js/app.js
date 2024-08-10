@@ -62,7 +62,6 @@ function checkGuess(){
     boxes.forEach((box,index)=> {
         const letter = currentGuess[index].toLowerCase()
         const keyEl = document.querySelector(`.button[data-key="${letter}"]`)
-        console.dir(keyEl)
         if(currentGuess[index].toLowerCase() === rightGuess[index].toLowerCase()){
             box.style.backgroundColor = '#2b780b'
             keyEl.style.backgroundColor = '#2b780b'
