@@ -1,6 +1,6 @@
 # Wordle - Countries Edition
-![Top part of Wordle game](https://i.imgur.com/ytKYlG6.png)
-![Bottom part of Wordle game](https://i.imgur.com/5dHKYYe.png)
+![Top part of Wordle game](https://i.imgur.com/apjGm4V.png)
+![Bottom part of Wordle game](https://i.imgur.com/AIZRWO4.png)
 
 ### Game name: 
 * Wordle - Countries Edition
