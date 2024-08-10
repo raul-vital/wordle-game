@@ -72,7 +72,10 @@ function checkGuess(){
             box.style.backgroundColor = '#464641'
             keyEl.style.backgroundColor = '#464641'
         }
-    })
+        setTimeout(() => {
+        box.classList.add('flip-box')
+        })
+})
 
     if(currentGuess.toLowerCase() === rightGuess.toLowerCase()){
         messageEl.textContent = 'Congratulations! You guessed the right country!'
