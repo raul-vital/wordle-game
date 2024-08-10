@@ -29,6 +29,7 @@
 
 * [MDN Docs - innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 
+* [CSS Animations](https://www.w3schools.com/css/css3_animations.asp)
 
 
 
