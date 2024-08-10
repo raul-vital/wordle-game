@@ -49,6 +49,7 @@ h3{
     display:flex;
     flex-direction: column;
     margin-bottom: 150px;
+    gap: 7px;
 }
 .row{
     display: flex;

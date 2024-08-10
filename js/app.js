@@ -87,9 +87,6 @@ function updateBoard(){
       box.textContent = currentGuess[index] || ''
    })
 }
-
-
-
 //Return a random word out of words array
 function randomWord(){
    return words[Math.floor(Math.random()* words.length)]
